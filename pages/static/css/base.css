@@ -1,0 +1,33 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: px;
+    font-size: 2rem;
+    line-height: 1.2rem;
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+nav{
+    margin: 2rem;
+}
+
+ul{
+    word-spacing: 1.2rem;
+    text-transform: capitalize;
+    float: right;
+    padding-right: 5rem;
+    padding-top: 3rem;
+}
+
+li{
+    display: inline;
+}
+
+.logo{
+    width: 10rem;
+    height: 10rem;
+    padding-left: 5rem;
+}
+
+a{
+    text-decoration: none;
+}
