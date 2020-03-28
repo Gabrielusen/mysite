@@ -8,18 +8,39 @@
     <link href="{% static 'css/base.css' %}">
     <title>Gabriel Usen</title>
     <link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet"/>
+    <!-- Compiled and minified CSS
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    Compiled and minified JavaScript
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>--->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="listings">
-            <a href="{% url 'home' %}"><img src="{% static 'images/logo_transparent.png' %}" class="logo"/></a>
-            <ul>
-                <li><a href="{% url 'home' %}">home</a></li>
-                <li><a href="">projects</a></li>
-                <li><a href="">apod</a></li>
-            </ul>
+        <nav class="">
+            <div class="container">
+                <a href="{% url 'home' %}"><img src="{% static 'images/logo_transparent.png' %}" height="100" width="100"/></a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="{% url 'home' %}">home</a></li>
+                    <li><a href="">projects</a></li>
+                    <li><a href="">apod</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+    <div class="container">
+        <div class="adjust">
+            <p class="name">Hi, my name is</p>
+            <h1><strong>Gabriel Usen.</strong></h1>
+            <h4>self taught software and python developer through research & development</h4>
+            {% now "Y-m-d" as today_str %}
+            <p>Lagos, Nigeria. {{ today_str }}</p>
+        </div>
+    </div>
 {% block content %}
 {% endblock content %}
 </body>
