@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{% static 'css/base.css' %}">
+    <link href="//db.onlinewebfonts.com/c/9343496bb158886797785c1dfe92365f?family=SultanNahiaW20" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
     <title>Gabriel Usen</title>
     <link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet"/>
     <!-- Compiled and minified CSS
@@ -37,8 +39,8 @@
             <p class="name">Hi, my name is</p>
             <h1><strong>Gabriel Usen.</strong></h1>
             <h4>self taught software and python developer through research & development</h4>
-            {% now "Y-m-d" as today_str %}
-            <p>Lagos, Nigeria. {{ today_str }}</p>
+            {% now "F j, Y" as today_str %}
+            <p >Lagos, Nigeria. {{ today_str }}</p>
         </div>
     </div>
 {% block content %}

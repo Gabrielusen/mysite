@@ -1,5 +1,13 @@
+@font-face {
+    font-family: "SultanNahiaW20"; src: url("//db.onlinewebfonts.com/t/9343496bb158886797785c1dfe92365f.eot");
+    src: url("//db.onlinewebfonts.com/t/9343496bb158886797785c1dfe92365f.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/9343496bb158886797785c1dfe92365f.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/9343496bb158886797785c1dfe92365f.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/9343496bb158886797785c1dfe92365f.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/9343496bb158886797785c1dfe92365f.svg#SultanNahiaW20") format("svg");
+}
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Baloo Thambi 2', cursive;
     font-size: 1.3rem;
     line-height: 1.2rem;
     background-color: rgb(0, 0, 0, 0.1);
@@ -20,13 +28,14 @@ ul{
     word-spacing: 1.2rem;
     text-transform: capitalize;
     float: right;
-    padding-right: 5rem;
+    padding-right: ;
     padding-top: 3rem;
     font-size: 1.6rem;
 
 }
 
 li{
+    font-size: 1.9rem;
     display: inline;
 }
 
@@ -46,7 +55,7 @@ a:hover{
 }
 
 .container{
-    font-family: 'roboto', sans-serif;
+    font-family: 'Baloo Thambi 2', cursive;
     font-weight: 300;
     color: white;
     top: 50%;
@@ -61,5 +70,15 @@ h1{
 
 .name{
     letter-spacing: 0.3rem;
+    color:
 }
 
+.adjust{
+    margin: 0px;
+    padding: 0px;
+}
+
+strong{
+    font-family: "SultanNahiaW20";
+    font-size: 5rem;
+}
