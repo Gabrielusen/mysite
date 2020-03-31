@@ -73,12 +73,18 @@ h1{
 
 .name{
     letter-spacing: 0.3rem;
-    color:
+    color: #070707;
+    font-weight: bold;
 }
 
+/* adjust */
 .adjust{
-    padding-left: 25rem;
+    max-width: 70%;
     padding-top: 5rem;
+    margin: 1rem auto;
+    overflow: hidden;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 strong{
