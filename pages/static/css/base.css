@@ -10,14 +10,17 @@ body {
     font-family: 'Baloo Thambi 2', cursive;
     font-size: 1.3rem;
     line-height: 1.2rem;
-    background-color: rgb(0, 0, 0, 0.1);
-    background: url('../images/nice.jpg') no-repeat center center/cover;
-    background-size: 100%;
-    z-index: 2;
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
+}
+
+.griffin{
+    background: url('../images/nice.jpg') no-repeat center center fixed;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    background-position: right center;
 }
 
 nav{
@@ -28,9 +31,8 @@ ul{
     word-spacing: 1.2rem;
     text-transform: capitalize;
     float: right;
-    padding-right: ;
-    padding-top: 3rem;
     font-size: 1.6rem;
+    padding-top: 3rem;
 
 }
 
@@ -55,6 +57,7 @@ a:hover{
 }
 
 .container{
+    padding-top: 2rem;
     font-family: 'Baloo Thambi 2', cursive;
     font-weight: 300;
     color: white;
@@ -82,3 +85,4 @@ strong{
     font-family: "SultanNahiaW20";
     font-size: 5rem;
 }
+
