@@ -13,14 +13,14 @@ body {
 }
 
 .griffin{
-    background: url('../images/nice.jpg') no-repeat center center fixed;
+    background: url('../images/nice.jpg') no-repeat fixed;
     height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     min-height: 100%;
-    background-position: right center;
+    background-position: center center;
 }
 
 nav{
@@ -77,8 +77,8 @@ h1{
 }
 
 .adjust{
-    margin: 0px;
-    padding: 0px;
+    padding-left: 25rem;
+    padding-top: 5rem;
 }
 
 strong{
