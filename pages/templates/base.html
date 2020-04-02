@@ -29,6 +29,7 @@
             <ul id="nav-mobile" class="right">
                 <li><a href="{% url 'home' %}">home</a></li>
                 <li><a href="">projects</a></li>
+                <li><a href="">contact</a></li>
                 <li><a href="">apod</a></li>
             </ul>
         </div>
@@ -36,13 +37,20 @@
     <div class="container second">
         <div class="adjust">
             <p class="name">Hi, my name is</p>
-            <h1><strong>Gabriel Usen.</strong></h1>
+            <h1><strong class="glitch" data-text="GABRIEL USEN">Gabriel Usen.</strong></h1>
             <h4>self taught software and python developer through research & development</h4>
             {% now "F j, Y" as today_str %}
             <p >Lagos, Nigeria. {{ today_str }}</p>
         </div>
     </div>
 </div>
+<section class="">
+    <div class="container">
+        <div class="projects">
+            <
+        </div>
+    </div>
+</section>
 {% block content %}
 {% endblock content %}
 </body>
