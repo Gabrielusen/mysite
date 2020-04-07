@@ -91,3 +91,13 @@ h1{
     font-family: "SultanNahiaW20";
     font-size: 7rem;
 }
+
+.project-section{
+    padding-top: 2rem;
+    z-index: 2;
+}
+
+.container-size{
+    font-family: 'Baloo Thambi 2', cursive;
+    text-align: center;
+}
