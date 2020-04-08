@@ -72,9 +72,13 @@ h1{
     font-size: 5rem;
 }
 
+p{
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
 .name{
     letter-spacing: 0.3rem;
-    color: #070707;
+    color: #111010;
     font-weight: bold;
 }
 
@@ -100,4 +104,21 @@ h1{
 .container-size{
     font-family: 'Baloo Thambi 2', cursive;
     text-align: center;
+}
+
+#project{
+    color: #111010;
+}
+
+.contact{
+    text-align: center;
+    padding-top: 2rem;
+    font-family: 'Baloo Thambi 2', cursive;
+    color: black;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+form{
+    padding-top: 2rem;
 }
