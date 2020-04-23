@@ -42,14 +42,16 @@
 <section class="project-section">
     <div class="container-size">
         <h2 id="project">Projects</h2>
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="project showcase">
+        {% for project in object_list %}
+        <div class="card" style="width: 18rem; display: inline-block ">
+            <img src="{{ project.image }}" class="card-img-top" alt="project showcase">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <a href="#" class="btn btn-primary">Read More</a>
             </div>
         </div>
+        {% endfor %}
     </div>
 </section>
 <section id="contact" class="text-center">

@@ -103,7 +103,7 @@ p{
 }
 
 .project-section{
-    padding-top: 2rem;
+    padding-top: 1.8rem;
     z-index: 2;
 }
 
@@ -122,13 +122,8 @@ section#contact {
 }
 
 section#contact h2 {
+    color: #111010;
     font-family: 'Baloo Thambi 2', cursive;
+    padding-top: 1.5rem;
 }
 
-form{
-    background-color: rgb(16, 216, 252);
-    padding: 100px;
-    text-align: left;
-    margin: auto;
-    display: table;
-}
