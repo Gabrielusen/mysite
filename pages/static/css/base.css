@@ -8,12 +8,16 @@
 }
 body {
     font-family: 'Baloo Thambi 2', cursive;
-    font-size: 1.3rem;
-    line-height: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 0.4rem;
+}
+
+h2{
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 .griffin{
-    background: url('../images/nice.jpg') no-repeat fixed;
+    background: url('../images/nice.jpg') no-repeat;
     height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -31,20 +35,21 @@ ul{
     word-spacing: 1.8rem;
     text-transform: capitalize;
     float: right;
-    font-size: 1.6rem;
+    font-size: 0.5rem;
     padding-top: 3rem;
 
 }
 
 li{
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     display: inline;
 }
 
 .logo{
     width: 10rem;
     height: 10rem;
-    padding-left: 5rem;
+    padding-left: 2rem;
+
 }
 
 a{
@@ -58,9 +63,9 @@ a:hover{
 
 /* container */
 .container{
-    padding-top: 2rem;
+    padding-top: 1.1rem;
     font-family: 'Baloo Thambi 2', cursive;
-    font-weight: 300;
+    font-weight: 100;
     color: white;
     top: 50%;
     left: 50%;
@@ -69,7 +74,7 @@ a:hover{
 h1{
     text-transform: uppercase;
     word-spacing: 0.9rem;
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 p{
@@ -77,23 +82,24 @@ p{
 }
 
 .name{
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     color: #111010;
     font-weight: bold;
 }
 
 /* adjust */
 .adjust{
-    max-width: 70%;
+    max-width: 75%;
     padding-top: 5rem;
     margin: 1rem auto;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-size: rem;
 }
 
 .glitch{
     font-family: "SultanNahiaW20";
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .project-section{
@@ -110,15 +116,19 @@ p{
     color: #111010;
 }
 
-.contact{
-    text-align: center;
-    padding-top: 2rem;
+section#contact {
+    border-top: 1px solid #e0e0e0;
     font-family: 'Baloo Thambi 2', cursive;
-    color: black;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+}
+
+section#contact h2 {
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 form{
-    padding-top: 2rem;
+    background-color: rgb(16, 216, 252);
+    padding: 100px;
+    text-align: left;
+    margin: auto;
+    display: table;
 }

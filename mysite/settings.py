@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'materialize',
-    'bootstrap3',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

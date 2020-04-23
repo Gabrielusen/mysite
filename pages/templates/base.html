@@ -14,12 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <div class="griffin">
@@ -38,7 +33,7 @@
         <div class="adjust">
             <p class="name">Hi, my name is</p>
             <h1><strong class="glitch" data-text="GABRIEL USEN">Gabriel Usen.</strong></h1>
-            <h4>self taught software and python developer through research & development</h4>
+            <h5>self taught software and python developer through research & development</h5>
             {% now "F j, Y" as today_str %}
             <p >Lagos, Nigeria. {{ today_str }}</p>
         </div>
@@ -47,28 +42,44 @@
 <section class="project-section">
     <div class="container-size">
         <h2 id="project">Projects</h2>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="project showcase">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     </div>
 </section>
-<section class="contact">
-    <h2 id="contact-me">Contact</h2>
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s3">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                </div>
-                <div class="input-field col s3">
-                    <i class="material-icons prefix">phone</i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
-                </div>
+<section id="contact" class="text-center">
+    <h2>Contact</h2>
+    <!--<form method="post">
+        <fieldset class="form-group">
+            <div class="col-xs-4">
+                <label></label>
+                <input type="email"	class="form-control" placeholder="Enter email">
             </div>
-        </form>
-    </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-xs-4">
+                <label></label>
+                <input	type="text"	class="form-control" placeholder="Name">
+            </div>
+        </fieldset>
+        <fieldset class="form-group">
+            <div class="col-xs-4">
+                <label></label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </fieldset>
+            <button	type="submit" class="btn btn-primary">Submit</button>
+    </form>--->
 </section>
 {% block content %}
 {% endblock content %}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
