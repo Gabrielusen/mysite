@@ -43,12 +43,13 @@
     <div class="container-size">
         <h2 id="project">Projects</h2>
         {% for project in object_list %}
-        <div class="card" style="width: 18rem; display: inline-block ">
-            <img src="{{ project.image }}" class="card-img-top" alt="project showcase">
+        <div class="card justify-content-center" style="width: 18rem; display: inline-block; margin-right: 2rem;">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ project.technology }}</h6>
                 <p class="card-text">{{ project.description }}</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="card-link">Github</a>
+                <a href="#" class="card-link">Demo</a>
             </div>
         </div>
         {% endfor %}
