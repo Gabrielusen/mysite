@@ -126,3 +126,6 @@ section#contact h2 {
     padding-top: 1.5rem;
 }
 
+form{
+    box-sizing: border-box;
+}
