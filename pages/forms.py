@@ -2,7 +2,6 @@ from django import forms
 
 
 class Email(forms.Form):
-    email = forms.EmailField()
-
-    def __str__(self):
-        return self.email
+    email = forms.EmailField(required=True)
+    subject = forms.CharField(required=True)
+    message = forms.CharField(widget=forms.Textarea, required=True)

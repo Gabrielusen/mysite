@@ -24,8 +24,8 @@
             <ul id="nav-mobile" class="right">
                 <li><a href="{% url 'home' %}">home</a></li>
                 <li><a href="" id="#project">projects</a></li>
-                <li><a href="" id="#contact-me">contact</a></li>
-                <li><a href="" class="btn waves-effect waves-teal">apod</a></li>
+                <li><a href="/contact" id="#contact-me">contact</a></li>
+                <li><a href="" class="btn waves-effect waves-teal" target="_blank">apod</a></li>
             </ul>
         </div>
     </header>
@@ -55,9 +55,10 @@
         {% endfor %}
     </div>
 </section>
-<section id="contact" class="text-center">
+<!--<section id="contact" class="text-center">
     <h2>Contact</h2>
     <form style="margin: 0 auto; width:400px;" method="post">
+        {% csrf_token %}
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Name">
         </div>
@@ -72,7 +73,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-</section>
+</section>-->
 {% block content %}
 {% endblock content %}
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
