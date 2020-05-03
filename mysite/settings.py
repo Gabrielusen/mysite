@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'materialize',
     'bootstrap4',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,4 @@ EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'gabrieluot23@gmail.com'
 EMAIL_HOST_PASSWORD = 'usenobong23'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
