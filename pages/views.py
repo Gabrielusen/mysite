@@ -9,6 +9,7 @@ from django.core.mail import send_mail, BadHeaderError
 class HomePageView(ListView):
     template_name = 'home.html'
     model = Project
+    field = ('name', 'email', 'subject', 'message')
 
 
 def contact_view(request):
@@ -17,11 +18,12 @@ def contact_view(request):
     else:
         form = Email(request.POST)
         if form.is_valid():
+            name = form.cleaned_data['name']
             subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from email']
+            email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, from_email, ['gabrielufot23@gmail.com'], fail_silently=False)
+                send_mail(name, subject, message, email, ['gabrielufot23@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
