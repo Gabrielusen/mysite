@@ -42,14 +42,14 @@
 <section class="project-section">
     <div class="container-size">
         <h2 id="project">Projects</h2>
-        {% for project in object_list %}
+        {% for item in project %}
         <div class="card justify-content-center" style="width: 18rem; display: inline-block; margin-right:  ">
             <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{ project.technology }}</h6>
-                <p class="card-text">{{ project.description }}</p>
-                <a href="{{ project.url }}" class="card-link">Github</a>
-                <a href="{{ project.demo }}" class="card-link">Demo</a>
+                <h5 class="card-title">{{ item.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ item.technology }}</h6>
+                <p class="card-text">{{ item.description }}</p>
+                <a href="{{ item.url }}" class="card-link">Github</a>
+                <a href="{{ item.demo }}" class="card-link">Demo</a>
             </div>
         </div>
         {% endfor %}

@@ -2,28 +2,37 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from .models import Project
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import Email
+from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 
 
-class HomePageView(ListView):
-    template_name = 'home.html'
-    model = Project
-    field = ('name', 'email', 'subject', 'message')
+# class HomePageView(ListView):
+#     template_name = 'home.html'
+#     model = Project
+#     field = ('name', 'email', 'subject', 'message')
+
+
+def home(request):
+    projects = Project.objects.all()
+    return render(request, 'home.html', {'project': projects})
 
 
 def contact_view(request):
     if request.method == 'GET':
-        form = Email()
+        form = ContactForm()
     else:
-        form = Email(request.POST)
+        form = ContactForm(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
             subject = form.cleaned_data['subject']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
-                send_mail(name, subject, message, email, ['gabrielufot23@gmail.com'])
+                send_mail(name,
+                          subject,
+                          message,
+                          email,
+                          ['gabrielufot23@gmail.com'],)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
