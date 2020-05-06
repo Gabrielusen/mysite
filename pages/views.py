@@ -18,25 +18,23 @@ def home(request):
 
 
 def contact_view(request):
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            subject = form.cleaned_data['subject']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(name,
-                          subject,
-                          message,
-                          email,
-                          ['gabrielufot23@gmail.com'],)
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('success')
-    return render(request, "contact.html", {'form': form})
+    if request.method == 'POST':
+        message_name = request.POST['name']
+        message_email = request.POST['email']
+        message_subject = request.POST['subject']
+        message = request.POST['message']
+
+        # send an email
+        send_mail(
+            message_subject,  # subject
+            message,  # message
+            message_email,  # email
+            ['gabrielufot23@gmail.com']  # To email
+        )
+
+        return render(request, 'contact.html', {'message_name': message_name})
+
+    return render(request, 'contact.html', {})
 
 
 def success_view(request):
