@@ -3,7 +3,9 @@ from django.views.generic import ListView
 from .models import Project
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import ContactForm
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import send_mail, BadHeaderError, EmailMessage
+import requests
+from django.template.loader import get_template
 
 
 # class HomePageView(ListView):
@@ -17,25 +19,47 @@ def home(request):
     return render(request, 'home.html', {'project': projects})
 
 
+# contact form view
+
 def contact_view(request):
+    form_class = ContactForm
+
+    # new logic
     if request.method == 'POST':
-        message_name = request.POST['name']
-        message_email = request.POST['email']
-        message_subject = request.POST['subject']
-        message = request.POST['message']
+        form = form_class(data=request.POST)
 
-        # send an email
-        send_mail(
-            message_subject,  # subject
-            message,  # message
-            message_email,  # email
-            ['gabrielufot23@gmail.com']  # To email
-        )
+        if form.is_valid():
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            message = request.POST.get('message', '')
 
-        return render(request, 'contact.html', {'message_name': message_name})
+            # Email the profile with the
+            # contact information
+            template = get_template('contact.html.txt')
+            context = {
+                'contact_name': name,
+                'contact_email': email,
+                'contact_message': message,
+            }
+            content = template.render(context)
 
-    return render(request, 'contact.html', {})
+            email = EmailMessage(
+                "New contact form submission",
+                content,
+                "Your website" + '',
+                ['gabrielufot23@gmail.com'],
+                headers={'Reply-To': email}
+            )
+            email.send()
+            return redirect('contact')
+    return render(request, 'contact.html', {'form': form_class})
 
 
 def success_view(request):
     return HttpResponse('Success! Thank you for your message.')
+
+
+def apod(request):
+    url = 'http://https://api.nasa.gov/planetary/apod?api_key=v0keSZbZafJqkVGQRK7KnPdeYh88Mkkkl9ceZcTv'
+    return render(request, 'home.html/apod')
+    requests.get(url.format())

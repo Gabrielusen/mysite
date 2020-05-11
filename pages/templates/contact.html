@@ -1,33 +1,20 @@
 {% extends "base.html" %}
 
-{% load crispy_forms_tags %}
+<!--{% load crispy_forms_tags %}-->
 
 {% block title %} contact {% endblock title %}
 {% block content %}
     <h2 style="text-align: center; border-top: 1px solid #e0e0e0; padding-top: 1.5rem;">Contact</h2>
+<center>
+</center>
 <div class="container" style="">
     <div class="row">
         <div class="col-lg-7" style="margin: 0 auto;">
-                {% if submitted %}
-            <h2>Email sent successfully</h2>
-                {% else %}
             <form action="{% url 'contact' %}" method="post" style="" novalidate>
                 {% csrf_token %}
-                <div class="row">
-                    <div class="col-6">
-                        {{ form.name|as_crispy_field }}
-                    </div>
-                    <div class="col-6">
-                        {{ form.email|as_crispy_field }}
-                    </div>
-                </div>
-                <div>
-                    {{ form.subject|as_crispy_field }}
-                    {{ form.message|as_crispy_field }}
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </div>
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-success">Submit</button>
             </form>
-                {% endif %}
         </div>
     </div>
 </div>

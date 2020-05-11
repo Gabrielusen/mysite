@@ -1,11 +1,8 @@
 name:
-{{ contact_name }}
+{{ message_name }}
 
 email:
-{{ contact_email }}
-
-subject:
-{{ contact_subject }}
+{{ message_email }}
 
 message:
-{{ contact_message }}
+{{ message }}
