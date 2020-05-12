@@ -22,7 +22,7 @@ def home(request):
 # contact form view
 
 def contact_view(request):
-    form_class = ContactForm
+    form_class = ContactForm    # form class
 
     # new logic
     if request.method == 'POST':
@@ -44,7 +44,7 @@ def contact_view(request):
             content = template.render(context)
 
             email = EmailMessage(
-                "New contact form submission",
+                name,
                 content,
                 "Your website" + '',
                 ['gabrielufot23@gmail.com'],

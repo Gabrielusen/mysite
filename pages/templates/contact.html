@@ -7,6 +7,13 @@
     <h2 style="text-align: center; border-top: 1px solid #e0e0e0; padding-top: 1.5rem;">Contact</h2>
 <center>
 </center>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 <div class="container" style="">
     <div class="row">
         <div class="col-lg-7" style="margin: 0 auto;">
