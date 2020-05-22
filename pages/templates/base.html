@@ -23,9 +23,9 @@
             <a href="{% url 'home' %}"><img src="{% static 'images/logo_transparent.png' %}" height="100" width="100"/></a>
             <ul id="nav-mobile" class="right">
                 <li><a href="{% url 'home' %}">home</a></li>
-                <li><a href="/apod" id="#project">projects</a></li>
+                <li><a href="{% url 'home' %}" id="#project">projects</a></li>
                 <li><a href="{% url 'contact' %}" id="#contact-me">contact</a></li>
-                <li><a href="" class="btn waves-effect waves-teal" target="_blank">apod</a></li>
+                <li><a href="{% url 'apod' %}" class="btn btn-primary" target="_blank">apod</a></li>
             </ul>
         </div>
     </header>
@@ -43,8 +43,8 @@
     <div class="container-size">
         <h2 id="project">Projects</h2>
         {% for item in project %}
-        <div class="card justify-content-center" style="width: 18rem; display: inline-block; margin-right:  ">
-            <div class="card-body">
+        <div class="card justify-content-center" style="width: 18rem; display: inline-block;">
+            <div class="card-body" >
                 <h5 class="card-title">{{ item.title }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ item.technology }}</h6>
                 <p class="card-text">{{ item.description }}</p>
