@@ -61,12 +61,9 @@ def success_view(request):
 
 def apod(request):
     url_apod = 'https://api.nasa.gov/planetary/apod?api_key=9PywoHIu6W7m6IPrgkob9hhbgBWfhzbL1KJQFwRo'
-    response = requests.get(url_apod)
-    data = response.json()
-    return render(request, 'apod.html', {
-        'hd': data[True],
-        'date': data['today']
-    })
-
-
-
+    date = '2020-05-22'
+    params = {
+        'date': date,
+        'hd': 'True'
+    }
+    return render(request(requests.get(url_apod, params=params).json()))
