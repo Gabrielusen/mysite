@@ -1,11 +1,13 @@
 {% load static %}
 <html>
 <head>
+    <!----------------- links ----------------->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{% static 'css/base.css' %}">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/9343496bb158886797785c1dfe92365f?family=SultanNahiaW20" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
     <title>Gabriel Usen</title>
@@ -17,13 +19,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+<!---------------- main container ------------------>
 <div class="griffin">
     <header>
         <div class="container">
             <a href="{% url 'home' %}"><img src="{% static 'images/logo_transparent.png' %}" height="100" width="100"/></a>
             <ul id="nav-mobile" class="right">
                 <li><a href="{% url 'home' %}">home</a></li>
-                <li><a href="{% url 'home' %}" id="#project">projects</a></li>
+                <li><a href="#project" id="#project">projects</a></li>
                 <li><a href="{% url 'contact' %}" id="#contact-me">contact</a></li>
                 <li><a href="{% url 'apod' %}" class="btn btn-primary" target="_blank">apod</a></li>
             </ul>
@@ -39,15 +42,16 @@
         </div>
     </div>
 </div>
+<!-------------- project section -------------->
 <section class="project-section">
     <div class="container-size">
         <h2 id="project">Projects</h2>
         {% for item in project %}
-        <div class="card justify-content-center" style="width: 18rem; display: inline-block;">
+        <div class="card justify-content-center" style="width: 18rem; display: inline-block; margin-right: 1rem; margin-left: 1rem;">
             <div class="card-body" >
                 <h5 class="card-title">{{ item.title }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ item.technology }}</h6>
-                <p class="card-text">{{ item.description }}</p>
+                <p class="card-text" style="justify-content: left;">{{ item.description }}</p>
                 <a href="{{ item.url }}" class="card-link">Github</a>
                 <a href="{{ item.demo }}" class="card-link">Demo</a>
             </div>
@@ -57,20 +61,22 @@
 </section>
 {% block content %}
 {% endblock content %}
+<!---------------- footer------------------->
 <footer class="footer">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-sm-7">
-                <p class="connected">STAY CONNECTED</p>
+            <div class="col-auto">
                 <ul class="footer-cols">
-                    <li><a href="https://www.linkedin.com/in/gabriel-usen-097b54184/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://twitter.com/gabzzyworldwide" target="_blank">Twitter</a></li>
-                    <li><a href="https://github.com/Gabrielusen" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/gabriel-usen-097b54184/" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></li>
+                    <li><a href="https://twitter.com/gabzzyworldwide" target="_blank"><ion-icon name="logo-tumblr" size="large"></ion-icon></a></li>
+                    <li><a href="https://github.com/Gabrielusen"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+<!---------------- footer end --------------->
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
