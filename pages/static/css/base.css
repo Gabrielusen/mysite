@@ -93,7 +93,7 @@ p{
 
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:600px){
     body{
         overflow-x: hidden;
     }
@@ -115,10 +115,12 @@ p{
         cursor: pointer;
         margin-top: 2.45rem;
     }
-}
 
-.menu-active{
-    transform: translateX(0%);
+@media screen and (max-width:320px){
+    .adjust{
+
+    }
+    }
 }
 
 .name{
@@ -131,9 +133,9 @@ p{
 .adjust{
     max-width: 75%;
     padding-top: 5rem;
-    margin: 1rem auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin: 0 auto;
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
 }
 
 .glitch{
@@ -172,5 +174,5 @@ form{
 
 .footer{
     border-top: 1px solid #e0e0e0;
-    background-color:
+    background-color: #EEF5F5;
 }
