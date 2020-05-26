@@ -36,7 +36,7 @@ ul {
     text-transform: capitalize;
     float: right;
     font-size: 0.5rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
 
 }
 
@@ -79,6 +79,46 @@ h1{
 
 p{
     font-family: 'Baloo Thambi 2', cursive;
+}
+
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .menu{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        float: right;
+        cursor: pointer;
+        margin-top: 2.45rem;
+    }
+}
+
+.menu-active{
+    transform: translateX(0%);
 }
 
 .name{

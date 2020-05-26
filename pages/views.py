@@ -66,4 +66,4 @@ def apod(request):
         'date': date,
         'hd': 'True'
     }
-    return render(request(requests.get(url_apod, params=params).json()))
+    return render(request, 'apod.html', {'params': params})

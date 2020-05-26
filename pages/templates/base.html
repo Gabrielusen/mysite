@@ -24,12 +24,25 @@
     <header>
         <div class="container">
             <a href="{% url 'home' %}"><img src="{% static 'images/logo_transparent.png' %}" height="100" width="100"/></a>
-            <ul id="nav-mobile" class="right">
-                <li><a href="{% url 'home' %}">home</a></li>
-                <li><a href="#project" id="#project">projects</a></li>
-                <li><a href="{% url 'contact' %}" id="#contact-me">contact</a></li>
-                <li><a href="{% url 'apod' %}" class="btn btn-primary" target="_blank">apod</a></li>
+            <ul class="menu">
+                <li class="nav-item">
+                    <a href="{% url 'home' %}">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#project" id="#project">projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" id="#contact-me">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'apod' %}" class="btn btn-primary" target="_blank">apod</a>
+                </li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </header>
     <div class="container second">
@@ -51,7 +64,7 @@
             <div class="card-body" >
                 <h5 class="card-title">{{ item.title }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{ item.technology }}</h6>
-                <p class="card-text" style="justify-content: left;">{{ item.description }}</p>
+                <p class="card-text">{{ item.description }}</p>
                 <a href="{{ item.url }}" class="card-link">Github</a>
                 <a href="{{ item.demo }}" class="card-link">Demo</a>
             </div>
@@ -67,18 +80,20 @@
         <div class="row justify-content-center">
             <div class="col-auto">
                 <ul class="footer-cols">
-                    <li><a href="https://www.linkedin.com/in/gabriel-usen-097b54184/" target="_blank"><ion-icon name="logo-facebook" size="large"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/gabriel-usen-097b54184/" target="_blank"><ion-icon name="logo-linkedin" size="large" style="color: #1da1f2;"></ion-icon></a></li>
                     <li><a href="https://twitter.com/gabzzyworldwide" target="_blank"><ion-icon name="logo-tumblr" size="large"></ion-icon></a></li>
-                    <li><a href="https://github.com/Gabrielusen"><ion-icon name="logo-github" size="large"></ion-icon></a></li>
+                    <li><a href="https://github.com/Gabrielusen"><ion-icon name="logo-github" size="large" style="color: black;"></ion-icon></a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+<p style="text-align: center;"><strong>&copy; 2020 Gabriel Usen. All rights reserved.</strong></p>
 <!---------------- footer end --------------->
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
