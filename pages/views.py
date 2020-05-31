@@ -73,4 +73,8 @@ def success_view(request):
 
 
 def apod(request):
-    return render(request, 'apod.html')
+    response = requests.get('https://api.nasa.gov/planetary/apod?api_key=9PywoHIu6W7m6IPrgkob9hhbgBWfhzbL1KJQFwRo')
+    run = response.json()
+    return render(request, 'apod.html', {
+        ''
+    })
