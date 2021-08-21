@@ -61,7 +61,7 @@ def contact_view(request):
             message = form.cleaned_data['message']
             email = form.cleaned_data['email']
             try:
-                send_mail(subject, message, email, ['gabrielufot23@gmail.com'])
+                send_mail(subject, message, email, ['gabrielufot23@gmail.com'], fail_silently=False)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
@@ -76,5 +76,6 @@ def apod(request):
     response = requests.get('https://api.nasa.gov/planetary/apod?api_key=9PywoHIu6W7m6IPrgkob9hhbgBWfhzbL1KJQFwRo')
     run = response.json()
     return render(request, 'apod.html', {
-        ''
+        'data': run['data'],
+        'hd': run['True']
     })
